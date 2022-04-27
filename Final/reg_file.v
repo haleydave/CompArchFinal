@@ -1,8 +1,8 @@
 module reg_file(IN, OUT1, OUT2, INADDRESS, OUT1ADDRESS, OUT2ADDRESS, WRITE, CLK, RESET) ;
  //Initalizing inputs
- input [3:0] INADDRESS;
- input [3:0] OUT1ADDRESS;
- input [3:0] OUT2ADDRESS;
+ input [2:0] INADDRESS;
+ input [2:0] OUT1ADDRESS;
+ input [2:0] OUT2ADDRESS;
  input WRITE;
  input CLK;
  input RESET;

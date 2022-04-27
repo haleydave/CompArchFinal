@@ -1,12 +1,12 @@
 module dmem(ADD, WE,WRITE, RD, CLK);
-input [3:0] ADD;
+input [2:0] ADD;
 input WE;
 input [7:0] WRITE;
 output [7:0] RD;
 input CLK;
 
 
- reg [7:0] RAM [0:15];
+ reg [7:0] RAM [0:7];
 
  assign RD = RAM[ADD[7:2]];
 
