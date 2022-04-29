@@ -28,7 +28,7 @@ module datapath(input          clk, reset,
   sl2         immsh(signimm, signimmsh);
   adder       pcadd2(pcplus4, signimmsh, pcbranch);
   mux2 #(8)  pcbrmux(pcplus4, pcbranch, pcsrc, pcnextbr);
-  mux2 #(8)  pcmux(pcnextbr, {pcplus4[7:6], 
+  mux2 #(8)  pcmux(pcnextbr, {pcplus4[7], 
                     instr[15:0], 2'b00}, jump, pcnext);
 
   // register file logic
