@@ -1,6 +1,6 @@
-module imem(CLK, instr, ADD);
+module imem( instr, ADD);
 
-input CLK;
+
 output [15:0] instr;
 input [2:0] ADD; 
 
