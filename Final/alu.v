@@ -16,5 +16,5 @@ module alu(input   [7:0] a, b,
       2'b11: result = sum[7];
     endcase
 
-  assign zero = (result == 32'b0);
+  assign zero = (result == 8'b0);
 endmodule

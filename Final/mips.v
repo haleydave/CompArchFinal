@@ -5,7 +5,7 @@ module mips(input          clk, reset,
             input   [15:0] instr,
             output         memwrite,
             output  [7:0] aluout, writedata,
-            input   [15:0] readdata);
+            input   [7:0] readdata);
 
 wire      memtoreg, alusrc, regdst, 
               regwrite, jump, pcsrc, zero;

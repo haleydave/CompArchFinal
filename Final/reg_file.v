@@ -13,14 +13,14 @@ module reg_file(IN, OUT1, OUT2, INADDRESS, OUT1ADDRESS, OUT2ADDRESS, WRITE, CLK,
  //initializing register variables
 integer i; 
  //creating the register array
- reg [7:0] regFile [0:15]; 
+ reg [7:0] regFile [0:7]; 
  //resetting the registers if the reset is 1 as a level triggered input
  always@(*)
  if (RESET == 1) begin 
     #2
     for (i = 0; i < 8; i = i + 1) 
         begin
-        regFile [i] = 8'b00000000 ; 
+        regFile [i] = 16'b0000000000000000 ; 
         end 
  
  end 

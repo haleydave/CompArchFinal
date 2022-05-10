@@ -12,7 +12,7 @@ module control(
     output reg print_signal
 );
 
-wire [3:0] opcode;
+reg [3:0] opcode;
 assign opcode = instr[15-:4];
 alu_op
 rd = instr[11-:4];

@@ -14,10 +14,10 @@ module datapath(input          clk, reset,
                 output  [15:0] pc,
                 input   [15:0] instr,
                 output  [7:0] aluout, writedata,
-                input   [15:0] readdata);
+                input   [7:0] readdata);
 
   wire [2:0]  writereg;
-  //we do pcplus b/c instruction length is 16 bits, so to
+  //we do pcplus2 b/c instruction length is 16 bits, so to
   //get to next instruction, jump up 2 bytes
   wire [15:0] pcnext, pcnextbr, pcplus2, pcbranch;
   wire [15:0] signimm, signimmsh;
@@ -37,7 +37,7 @@ module datapath(input          clk, reset,
   reg_file     rf(writedata, , , , , , ,clk , reset);
   mux2 #(3)   wrmux(instr[8:6], instr[2:0],
                     regdst, writereg);
-  mux2 #(16)  resmux(aluout, readdata, memtoreg, result);
+  mux2 #(8)  resmux(aluout, readdata, memtoreg, result);
   signext     se(instr[7:0], signimm);
 
   // ALU logic

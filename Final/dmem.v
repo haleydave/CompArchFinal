@@ -4,7 +4,8 @@ input WE;
 input [7:0] WRITE;
 output [7:0] RD;
 input CLK;
-
+//FIX THIS. THE ADD STUFF IS SUPER WRONG. PLEASE GOD DAVID 
+//REMEMBER TO FIX THIS.
 
  reg [7:0] RAM [0:7];
 

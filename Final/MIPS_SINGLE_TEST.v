@@ -8,8 +8,8 @@ module mips_single_cycle_tb();
   input        clk;
   input        reset;
 
-  input [15:0] writedata;
-  input [7:0] dataadr;
+  input [7:0] writedata;
+  input [2:0] dataadr;
   input        memwrite;
 
   // instantiate device to be tested
@@ -53,16 +53,17 @@ module mips_single_cycle_tb();
     end
 endmodule
 
-module top(input  logic        clk, reset, 
-           output logic [15:0] writedata, 
-           output logic [7:0] dataadr, 
-           output logic        memwrite);
+module top(input  wire        clk, reset, 
+           output wire [7:0] writedata, 
+           output wire [7:0] dataadr, 
+           output wire        memwrite);
 
-  logic [15:0] pc, instr;
-  logic readdata; 
+  wire [15:0] pc, instr;
+  wire [7:0] readdata; 
   // instantiate processor and memories
   mips mips(clk, reset, pc, instr, memwrite, dataadr, 
             writedata, readdata);
   imem imem(pc[7:2], instr);
-  dmem dmem(clk, memwrite, dataadr, writedata, readdata);
+  
+  dmem dmem (dataadr, memwrite, writedata, readdata, clk);
 endmodule

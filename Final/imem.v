@@ -1,10 +1,10 @@
-module imem( instr, ADD);
+module imem(input  logic [2:0] a,
+            output logic [15:0] rd);
 
+  reg [2:0] RAM[0:15];
 
-output [15:0] instr;
-input [2:0] ADD; 
+  initial
+      $readmemh("memfile.dat",RAM);
 
-//input reg and stuff to read from assembled file after I actually figure out assembler
-
-
+  assign rd = RAM[a]; // word aligned
 endmodule
