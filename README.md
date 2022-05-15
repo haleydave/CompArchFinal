@@ -10,4 +10,4 @@ R type operations are the simplest to handle. The opcode is simply 000, so once 
 This is a J type operation. The opcode for this is 101, this jumps the PC to that point in memory.
 ![image](https://user-images.githubusercontent.com/38709917/168492324-63a10723-6691-46bc-b898-b7e9516a61a1.png)
 
-This is an I type operation. The specific opcode for this one is 
+This is an I type operation. The specific opcode for this one is 101, which is used to set a flag.
