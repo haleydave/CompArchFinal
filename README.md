@@ -8,5 +8,6 @@ R type operations are the simplest to handle. The opcode is simply 000, so once 
 ![image](https://user-images.githubusercontent.com/38709917/168491536-6f74e0a3-f978-4419-b288-65a839cb0ff4.png)
 
 This is a J type operation. The opcode for this is 101, this jumps the PC to that point in memory.
-![image](https://user-images.githubusercontent.com/38709917/168491545-2ab866b1-af08-4437-b6bf-146959959baf.png)
+![image](https://user-images.githubusercontent.com/38709917/168492324-63a10723-6691-46bc-b898-b7e9516a61a1.png)
 
+This is an I type operation. The specific opcode for this one is 
