@@ -11,3 +11,7 @@ This is a J type operation. The opcode for this is 101, this jumps the PC to tha
 ![image](https://user-images.githubusercontent.com/38709917/168492324-63a10723-6691-46bc-b898-b7e9516a61a1.png)
 
 This is an I type operation. The specific opcode for this one is 101, which is used to set a flag.
+
+<img width="349" alt="Screen Shot 2022-05-15 at 4 55 45 PM" src="https://user-images.githubusercontent.com/70669116/168493410-afccd715-afb5-4a02-bab1-7d3f3771198d.png">
+
+Each instruction type is expected to have the same timing diagram. On the positive edge, the instruction is read from memory in the first clock cycle. Then the instruction is decoded, or essentially parsed into its parts on the negative edge of the second clock cycle. On third clock cycle’s positive edge, the ALU operation is performed. On the fourth cycle’s positive edge, we load the data back into the data memory and then we write it back into the register on the fourth cycle’s negative edge. On the fifth cycle’s positive edge the data in the register is loaded again.
