@@ -1,5 +1,5 @@
-`include "maindec.v"
-`include "aludec.v"
+`include "maindec.sv"
+`include "aludec.sv"
 module controller(input logic  [2:0] op, 
                   input  logic [3:0] funct,
                   input  logic       zero,
